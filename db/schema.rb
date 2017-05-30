@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170119021155) do
+ActiveRecord::Schema.define(version: 20170226195040) do
+
+  create_table "links_tables", force: :cascade do |t|
+    t.string   "site"
+    t.string   "method_type"
+    t.string   "language"
+    t.string   "base_url"
+    t.string   "url_prefix"
+    t.string   "url_suffix"
+    t.boolean  "viewed"
+    t.boolean  "in_a_sentence"
+    t.string   "sentence"
+    t.boolean  "example"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

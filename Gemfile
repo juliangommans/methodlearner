@@ -4,6 +4,8 @@ source 'https://rubygems.org'
 gem "backbone-rails"
 gem "marionette-rails"
 gem "handlebars_assets"
+gem "jquery-ui-rails"
+gem "rabl"
 
 # rails gems
 gem "devise"

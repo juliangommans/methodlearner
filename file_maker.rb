@@ -309,7 +309,7 @@ end"
   def views_layout
     "@#{@title}.module 'Views', (Views, App, Backbone, Marionette, $, _) ->
 
-  class Views.Layout extends Marionette.Layout"
+  class Views.Layout extends Marionette.LayoutView"
   end
 
   def views_view
@@ -497,7 +497,7 @@ end
   end
 
   def build_templates
-    extension = '.jst.eco'
+    extension = '.hbs'
     ["_#{@branchname}","#{@branchname}_layout", "_#{@appname}"].each do |temp|
       File.open( @templates + '/' + temp + extension, 'w') unless File.file?(@templates + '/' + temp + extension)
     end
@@ -624,6 +624,6 @@ options = {
 }
 
 x = BBMbuilder.new(options)#"PlanetExpress", "#{@appname}", "edit", false, "backbone/apps/")
-x.rails_setup
-x.initial_setup
-# x.constructor
+# x.rails_setup
+# x.initial_setup
+x.constructor
